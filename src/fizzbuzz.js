@@ -1,8 +1,10 @@
 function fizzBuzz(n) {
-    if (n === 3) return "Fizz";
-    if (n === 5) return "Buzz";
+    if (n % 15 === 0) return "FizzBuzz";
+    if (n % 3 === 0) return "Fizz";
+    if (n % 5 === 0) return "Buzz";
     return n;
 }
+
 
 
 if (typeof module !== 'undefined' && module.exports) {
@@ -16,4 +18,9 @@ it("returns 'Fizz' for 3", function () {
 it("returns 'Buzz' for 5", function () {
     expect(fizzBuzz(5)).toBe("Buzz");
 });
+
+it("returns 'FizzBuzz' for 15", function () {
+    expect(fizzBuzz(15)).toBe("FizzBuzz");
+});
+
 
